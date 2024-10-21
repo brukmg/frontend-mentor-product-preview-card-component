@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  --montserrat: "Montserrat", sans-serif;
+  --fraunces: "Fraunces", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--montserrat);
+  color: var(--dark-grayish-blue);
+  position: relative;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--cream);
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 40%;
+  min-height: 60vh;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+}
+
+img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.product-detail {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.label {
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+h1 {
+  margin: 1.5rem 0;
+  font-family: var(--fraunces);
+  color: var(--very-dark-blue);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.main-price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--dark-cyan);
+  font-family: var(--fraunces);
+}
+
+.old-price {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  text-decoration: line-through;
+  font-family: var(--montserrat);
+  color: var(--dark-grayish-blue);
+}
+
+button {
+  width: 100%;
+  background-color: var(--dark-cyan);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 12px 0;
+  color: var(--white);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.25s;
+}
+button > img {
+  width: 16px;
+  margin-right: 8px;
+}
+
+button:hover {
+  background-color: var(--very-dark-blue);
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-bottom: .5rem;
+  display: flex;justify-content: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 100px) and (max-width: 500px) {
+  main {
+    padding: 2rem 0;
+  }
+  .card {
+    width: 95%;
+    flex-direction: column;
+  }
+  img {
+    width: 100%;
+    aspect-ratio: 5/4;
+  }
+
+  .product-detail {
+    width: 100%;
+  }
+
+  .description {
+    width: 90%;
+  }
+
+  button {
+    width: 90%;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card {
+    width: 75%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1365px) {
+  .card {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .container {
+    width: 40%;
+  }
+}
